@@ -49,4 +49,10 @@ class User extends Authenticatable
     {
         return $this->belongsToMany('posts');
     }
+
+
+    // public function quizzes()
+    // {
+    //     return $this->belongsToMany('quizzes');
+    // }
 }

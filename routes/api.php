@@ -45,6 +45,11 @@ Route::group([
 Route::apiResource('/ceo', 'API\CEOController')->middleware('auth:api');
 
 
+Route::get('/quiz/list', 'API\Quizzes\QuizController@list');
+Route::apiResource('/quiz', 'API\Quizzes\QuizController'); //->middleware('auth:api');
+
+
+
 Route::get('/my_roles', 'ExamplesController@show_my_roles')->middleware('auth:api');
 Route::resource('/post', 'PostsController');//->middleware('auth:api');
 
